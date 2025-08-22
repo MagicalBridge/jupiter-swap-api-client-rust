@@ -1,0 +1,26 @@
+# Clippy配置文件 - Rust代码检查工具
+# 更多配置选项请参考: https://doc.rust-lang.org/clippy/configuration.html
+
+# 避免过多的布尔参数
+too-many-arguments-threshold = 7
+
+# 类型复杂度阈值
+type-complexity-threshold = 250
+
+# 单个表达式的复杂度阈值
+cognitive-complexity-threshold = 30
+
+# 避免过长的函数
+too-many-lines-threshold = 100
+
+# 枚举变体名称阈值
+enum-variant-name-threshold = 3
+
+# 避免过多的单字符名称
+single-char-binding-names-threshold = 4
+
+# 文档注释相关
+missing-docs-in-crate-items = false
+
+# 性能相关
+avoid-breaking-exported-api = false

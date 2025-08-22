@@ -1,0 +1,34 @@
+# Rust代码格式化配置文件 (Stable版本兼容)
+# 更多配置选项请参考: https://rust-lang.github.io/rustfmt/
+
+# 基本设置
+edition = "2021"
+max_width = 100
+hard_tabs = false
+tab_spaces = 4
+
+# 函数和结构体设置
+fn_params_layout = "Tall"
+
+# 其他设置
+newline_style = "Unix"
+remove_nested_parens = true
+use_small_heuristics = "Default"
+
+# 链式调用
+chain_width = 60
+single_line_if_else_max_width = 50
+
+# 数组和元组
+array_width = 60
+
+# 注释：以下选项需要nightly版本才能使用
+# imports_granularity = "Crate"
+# group_imports = "StdExternalCrate"
+# brace_style = "SameLineWhere"
+# control_brace_style = "AlwaysSameLine"
+# normalize_comments = true
+# wrap_comments = true
+# comment_width = 80
+# format_code_in_doc_comments = true
+# format_macro_matchers = true
