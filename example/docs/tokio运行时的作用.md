@@ -5,13 +5,16 @@
 ## 作用和变化
 
 ### 1. **函数签名转换**
-添加 `#[tokio::main]` 后，您的代码从：
+
+添加 `#[tokio::main]` 后，代码从：
 ```rust
 fn main() {
     // 同步代码
 }
 ```
+
 变成了：
+
 ```rust
 async fn main() {
     // 可以使用异步代码，如 .await
@@ -19,25 +22,27 @@ async fn main() {
 ```
 
 ### 2. **自动创建异步运行时**
+
 这个宏会自动生成类似下面的代码：
 ```rust
 fn main() {
     let rt = tokio::runtime::Runtime::new().unwrap();
     rt.block_on(async {
-        // 您的 async main 函数内容
+        // async main 函数内容
     });
 }
 ```
 
 ### 3. **启用异步功能**
-有了这个宏，您就可以在 main 函数中：
+
+有了这个宏，就可以在 main 函数中：
 - 使用 `.await` 语法
 - 调用异步函数
 - 使用异步 I/O 操作
 
-## 在您的代码中的具体作用
+## 在当前项目中的具体作用
 
-在您的示例代码中，`#[tokio::main]` 使得以下异步操作成为可能：
+在示例代码中，`#[tokio::main]` 使得以下异步操作成为可能：
 
 ```rust
 // 第34行：异步调用 quote 方法
